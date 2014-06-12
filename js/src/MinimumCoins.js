@@ -6,5 +6,14 @@
 function MinimumCoins() {
 }
 MinimumCoins.prototype.sterling = function(pence) {
-  return {'£2': 0, '£1': 0, '50p': 0, '20p': 0, '2p': 0, '1p': 0};
+    var values = [200, 100, 50, 20, 2, 1];
+    var label = ['£2', '£1', '50p', '20p', '2p', '1p'];
+    var output = {};
+    values.forEach(function(element, index, array) {
+        var count = pence / element;
+        pence = pence % element;
+        output[label[index]] = parseInt(count);
+    });
+        
+    return output;
 };
