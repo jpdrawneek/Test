@@ -9,13 +9,13 @@ function ConvertToPence() {
 }
 ConvertToPence.prototype.sterling = function(input) {
     var output;
-    if ((output = this.checknumber(input)) !== false) {
+    if ((output = this.checkNumber(input)) !== false) {
         return output;
     } else {
         tmp = this.stripSterlingSymbols(input);
         if (!this.checkForExtraCharacters(tmp)) {
             tmp = this.stripDecimal(tmp);
-            if ((output = this.checknumber(tmp)) !== false) {
+            if ((output = this.checkNumber(tmp)) !== false) {
                 return output;
             }
             this.errorsList.push('No value entered');
@@ -30,7 +30,7 @@ ConvertToPence.prototype.clearErrors = function() {
     this.errorsList = [];
 };
 
-ConvertToPence.prototype.checknumber = function(input) {
+ConvertToPence.prototype.checkNumber = function(input) {
     var regex = /^\d+$/i
     if (typeof input==='number' && (input%1)===0) {
         return input;
