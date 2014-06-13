@@ -34,8 +34,9 @@ describe("Form Input", function() {
     expect(input.sterling('£1.23')).toEqual(123);
   });
   
-  xit("should be able to handle pence symbol with decimal", function() {
-    
+  it("should be able to handle multiple decimal and return 0", function() {
+    expect(input.sterling('123.00.00')).toEqual(0);
+    expect(input.sterling('123.00.00.00')).toEqual(0);
   });
   
   it("should return 0 for empty input", function() {

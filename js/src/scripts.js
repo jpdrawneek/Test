@@ -10,7 +10,11 @@ $(document).ready(function(){
     $('form').submit(function(e){
         e.preventDefault();
         var input = $('#amount').val();
-        controller.process(input);
+        var data = controller.process(input);
+        $('#errors').children().remove();
+        $('#errors').append(data['errors']);
+        $('#result').children().remove();
+        $('#result').append(data['result']);
         return false;
     });
 });
