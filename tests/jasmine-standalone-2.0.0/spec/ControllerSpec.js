@@ -27,7 +27,7 @@ describe("Controller", function() {
   });
   
   it("should be able to handle multiple decimal and return 0", function() {
-    expect(controller.process('123.00.00.00')).toEqual({ errors : '<h2>Errors</h2><ul><li>Too many decimal places entered.</li><li>No value entered</li></ul>', result : '' });
+    expect(controller.process('123.00.00.00')).toEqual({ errors : '<h2>Errors</h2><ul><li>Too many decimal places entered.</li></ul>', result : '' });
   });
   
   it("should return only error for empty input", function() {
