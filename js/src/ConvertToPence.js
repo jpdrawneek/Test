@@ -22,7 +22,8 @@ ConvertToPence.prototype.sterling = function(input) {
     return this._process(input, list);
 };
 /**
- * Private meothod that preforms the conversion.
+ * Private method that preforms the conversion.
+ * @private
  *
  * @param {mixed} input
  *   This is the input value to be converted.

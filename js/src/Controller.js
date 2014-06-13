@@ -12,10 +12,10 @@ function Controller(MinimumCoins, ConvertToPence) {
 /**
  * Main method of class to manage the calculation and format output.
  *
- * @param string data
+ * @param {String} data
  *   Input value from the UI to be processed.
  *
- * @returns object
+ * @returns {Object}
  *   JavaScript object with two attributes errors and result.  They contain either empty string or valid html to be rendered.
  */
 Controller.prototype.process = function(data) {

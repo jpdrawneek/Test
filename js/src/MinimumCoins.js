@@ -14,10 +14,11 @@ MinimumCoins.prototype.sterling = function(pence) {
 };
 /**
  * Private method to do the actual calculating.
+ * @private
  *
- * @param integer pence
+ * @param {Number} pence
  *
- * @returns object
+ * @returns {object}
  *   JavaScript object holding what coins are required as attributes.
  */
 MinimumCoins.prototype._process = function(pence, values, labels) {
