@@ -9,7 +9,15 @@ function Controller(MinimumCoins, ConvertToPence) {
     this.resultsTemplate = Handlebars.compile('<h2>Result</h2><ul>{{#each this}}{{#if this}}<li><span class="coin">Coin: {{@key}},</span> <span class="number">Number = {{this}}</span></li>{{/if}}{{/each}}</ul>');
     this.errorsTemplate = Handlebars.compile('<h2>Errors</h2><ul>{{#each this}}<li>{{this}}</li>{{/each}}</ul>');
 }
-
+/**
+ * Main method of class to manage the calculation and format output.
+ *
+ * @param string data
+ *   Input value from the UI to be processed.
+ *
+ * @returns object
+ *   JavaScript object with two attributes errors and result.  They contain either empty string or valid html to be rendered.
+ */
 Controller.prototype.process = function(data) {
     this.convert.clearErrors();
     var pence = this.convert.sterling(data);

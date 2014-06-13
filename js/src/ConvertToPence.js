@@ -7,6 +7,15 @@ function ConvertToPence() {
     this.error = 0;
     this.errorsList = [];
 }
+/**
+ * Convert the entered Sterling value to Sterling pence.
+ *
+ * @param mixed input
+ *   Either string or an integer
+ *
+ * @returns Number
+ *   0 on failure or 0 inputed. Otherwise the pence value of the input.
+ */
 ConvertToPence.prototype.sterling = function(input) {
     var output;
     if ((output = this.checkNumber(input)) !== false) {
