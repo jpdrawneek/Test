@@ -4,13 +4,13 @@
  */
 var coins = new MinimumCoins();
 var convert = new ConvertToPence();
+var controller = new Controller(coins, convert);
 
 $(document).ready(function(){
     $('form').submit(function(e){
+        e.preventDefault();
         var input = $('#amount').val();
-        var pence = convert.sterling(input);
-        var data = coins.sterling(pence);
-        console.log(data);
+        controller.process(input);
         return false;
     });
 });

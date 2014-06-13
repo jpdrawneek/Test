@@ -18,12 +18,15 @@ ConvertToPence.prototype.sterling = function(input) {
                 return output;
             }
         }
-        
-//        tmp = this.parseInt(input);
-        
+        this.error = 1;
         return 0;
     }
 };
+
+ConvertToPence.prototype.clearErrors = function() {
+    this.error = 0;
+    this.errorMessages = {};
+}
 
 ConvertToPence.prototype.checknumber = function(input) {
     var regex = /^\d+$/i
