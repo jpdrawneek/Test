@@ -12,9 +12,13 @@ $(document).ready(function(){
         var input = $('#amount').val();
         var data = controller.process(input);
         $('#errors').children().remove();
-        $('#errors').append(data['errors']);
+        if (data['errors']) {
+            $('#errors').append('<div class="wrapper">' + data['errors'] + '</div>');
+        }
         $('#result').children().remove();
-        $('#result').append(data['result']);
+        if (data['result']) {
+            $('#result').append('<div class="wrapper">' + data['result'] + '</div>');
+        }
         return false;
     });
 });

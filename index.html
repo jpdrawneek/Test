@@ -7,6 +7,8 @@
     <head>
         <title>Sterling coin amount calculator</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/handlebars.min.js"></script>
@@ -16,15 +18,17 @@
         <script type="text/javascript" src="js/src/scripts.js"></script>
     </head>
     <body>
-        <h1>Sterling coin amount calculator</h1>
-        <p>Enter a value of sterling currency in number format, press enter and it will tell you how many sterling coins are required.</p>
-        <p>You can enter a value in pence or pounds, with option symbols of £ and p.</p>
-        <p>Coins used by this app are only '£2'; '£1'; '50p'; '20p'; '2p' and '1p'</p>
-        <div id="errors"></div>
-        <form>
-            <input type="text" name="amount" id="amount" />
-            <input type="submit" name="enter" value="enter" id="enter" />
-        </form>
-        <div id="result"></div>
+        <div id="wrapper">
+            <h1>Sterling coin amount calculator</h1>
+            <p>Enter a value of sterling currency in number format, press enter and it will tell you how many sterling coins are required.</p>
+            <p>You can enter a value in pence or pounds, with option symbols of £ and p.</p>
+            <p>Coins used by this app are only '£2'; '£1'; '50p'; '20p'; '2p' and '1p'</p>
+            <div id="errors"></div>
+            <form>
+                <input type="text" name="amount" id="amount" placeholder="Enter amount, eg £1.23" />
+                <input type="submit" name="enter" value="enter" id="enter" />
+            </form>
+            <div id="result"></div>
+        </div>
     </body>
 </html>
